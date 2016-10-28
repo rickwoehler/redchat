@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+  *{
+    margin-top:10px;
+  }
+
+  </style>
+
+  <title>Document</title>
+  {% load staticfiles %}
+</head>
+<body>
+  <div>
+    <p>Choose a subreddit to see diction info on their posts!</p>
+    <form action="results" method="get">
+      <label for="source">Please enter a subreddit:</label>
+      <input type="text" name="source"><br>
+      <label for="submissions">Posts</label>
+      <input type="radio" name="op" value="submissions">
+      <label for="comments"style="margin-left:10px">Comments</label>
+      <input type="radio" name="op" value="comments">
+      <label for="limit" style="margin-left:25px">  Number of:</label>
+      <select name="limit" style="margin-left:10px">
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="250">250</option>
+        <option value="500">500</option>
+      </select><br><br>
+      <!--<label for="exclude">Enter any words to exclude.<br> Words shorter than 4 letters are left out by default</label><br>
+      <input type="text" name="exclude">-->
+      
+      <input type="submit" style="margin-left:100px;margin-top:15px">
+    </form>
+
+
+
+  </div>
+
+</body>
+</html>
